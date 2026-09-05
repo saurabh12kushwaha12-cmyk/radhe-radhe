@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Fraunces, Inter } from 'next/font/google'
+import { NavigationFeedback } from '@/components/shared/navigation-feedback'
 import { siteConfig } from '@/config/site'
 import './globals.css'
 
@@ -70,7 +71,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable} bg-background`}>
       <body className="font-sans antialiased">
-        {children}
+        <NavigationFeedback>{children}</NavigationFeedback>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

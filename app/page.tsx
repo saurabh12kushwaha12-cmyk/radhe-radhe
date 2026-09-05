@@ -10,22 +10,23 @@ import { Testimonials } from "@/components/sections/testimonials"
 import { TrustFeatures } from "@/components/sections/trust-features"
 import { SiteFooter } from "@/components/layout/footer"
 import { SiteHeader } from "@/components/layout/header"
+import { ScrollReveal } from "@/components/shared/scroll-reveal"
 
 export default function HomePage() {
   return (
     <>
       <SiteHeader />
       <main>
-        <Hero />
-        <TrustFeatures />
-        <ServicesPreview />
-        <ProductsShowcase />
-        <Stats />
-        <AboutPreview />
-        <Testimonials />
-        <Gallery />
-        <Faq />
-        <Cta />
+        <ScrollReveal><Hero /></ScrollReveal>
+        <ScrollReveal delay={60}><TrustFeatures /></ScrollReveal>
+        <ScrollReveal delay={90}><ServicesPreview /></ScrollReveal>
+        <ScrollReveal delay={120}><ProductsShowcase /></ScrollReveal>
+        <ScrollReveal delay={90}><Stats /></ScrollReveal>
+        <ScrollReveal delay={60}><AboutPreview /></ScrollReveal>
+        <ScrollReveal delay={90}><Testimonials /></ScrollReveal>
+        <ScrollReveal delay={120}><Gallery /></ScrollReveal>
+        <ScrollReveal delay={90}><Faq /></ScrollReveal>
+        <ScrollReveal delay={60}><Cta /></ScrollReveal>
       </main>
       <SiteFooter />
     </>

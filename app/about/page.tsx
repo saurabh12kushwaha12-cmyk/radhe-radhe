@@ -7,6 +7,7 @@ import { SiteFooter } from "@/components/layout/footer"
 import { SiteHeader } from "@/components/layout/header"
 import { Container } from "@/components/shared/container"
 import { SectionHeading } from "@/components/shared/section-heading"
+import { ScrollReveal } from "@/components/shared/scroll-reveal"
 import { siteConfig } from "@/config/site"
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function AboutPage() {
     <>
       <SiteHeader />
       <main>
-        <section className="border-b border-border/60 py-14 sm:py-20">
+        <ScrollReveal><section className="border-b border-border/60 py-14 sm:py-20">
           <Container>
             <SectionHeading
               eyebrow={about.hero.eyebrow}
@@ -31,9 +32,9 @@ export default function AboutPage() {
               className="mx-auto max-w-2xl"
             />
           </Container>
-        </section>
+        </section></ScrollReveal>
 
-        <section className="py-14 sm:py-20">
+        <ScrollReveal delay={60}><section className="py-14 sm:py-20">
           <Container className="grid items-center gap-10 md:grid-cols-2">
             <div className="relative aspect-[5/4] overflow-hidden rounded-2xl bg-muted">
               <Image
@@ -56,9 +57,9 @@ export default function AboutPage() {
               ))}
             </div>
           </Container>
-        </section>
+        </section></ScrollReveal>
 
-        <section className="border-t border-border/60 bg-primary py-14 sm:py-16">
+        <ScrollReveal delay={90}><section className="border-t border-border/60 bg-primary py-14 sm:py-16">
           <Container>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
               {home.stats.map((stat) => (
@@ -66,9 +67,9 @@ export default function AboutPage() {
               ))}
             </div>
           </Container>
-        </section>
+        </section></ScrollReveal>
 
-        <section className="border-t border-border/60 py-14 sm:py-20">
+        <ScrollReveal delay={120}><section className="border-t border-border/60 py-14 sm:py-20">
           <Container className="flex flex-col gap-10">
             <SectionHeading eyebrow="What We Value" title="The principles behind every piece." align="center" />
             <div className="grid gap-5 sm:grid-cols-3">
@@ -77,9 +78,9 @@ export default function AboutPage() {
               ))}
             </div>
           </Container>
-        </section>
+        </section></ScrollReveal>
 
-        <Cta />
+        <ScrollReveal delay={90}><Cta /></ScrollReveal>
       </main>
       <SiteFooter />
     </>

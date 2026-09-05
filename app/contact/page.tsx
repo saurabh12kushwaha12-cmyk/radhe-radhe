@@ -5,6 +5,7 @@ import { SiteFooter } from "@/components/layout/footer"
 import { SiteHeader } from "@/components/layout/header"
 import { Container } from "@/components/shared/container"
 import { SectionHeading } from "@/components/shared/section-heading"
+import { ScrollReveal } from "@/components/shared/scroll-reveal"
 import { siteConfig } from "@/config/site"
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function ContactPage() {
   return (
     <>
       <SiteHeader />
+      <ScrollReveal>
       <main>
         <section className="border-b border-border/60 py-14 sm:py-20">
           <Container>
@@ -68,6 +70,7 @@ export default function ContactPage() {
           </Container>
         </section>
       </main>
+      </ScrollReveal>
       <SiteFooter />
     </>
   )

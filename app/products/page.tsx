@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/layout/header"
 import { Container } from "@/components/shared/container"
 import { SectionHeading } from "@/components/shared/section-heading"
 import { cn } from "@/lib/utils"
+import { ScrollReveal } from "@/components/shared/scroll-reveal"
 import { siteConfig } from "@/config/site"
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default async function ProductsPage({
   return (
     <>
       <SiteHeader />
+      <ScrollReveal>
       <main>
         <section className="border-b border-border/60 py-14 sm:py-16">
           <Container>
@@ -74,6 +76,7 @@ export default async function ProductsPage({
           </Container>
         </section>
       </main>
+      </ScrollReveal>
       <SiteFooter />
     </>
   )
