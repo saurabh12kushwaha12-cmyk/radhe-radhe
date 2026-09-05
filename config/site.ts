@@ -25,11 +25,11 @@ export const siteConfig: SiteConfig = {
   },
 
   contact: {
-    email: "hello@covehome.example",
-    phone: "+15551234567",
-    phoneDisplay: "+1 (555) 123-4567",
-    address: "128 Foundry Lane, Portland, OR 97209",
-    hours: "Mon–Fri, 9:00–17:00 PT",
+    email: "namaste@covehome.example",
+    phone: "+919000012345",
+    phoneDisplay: "+91 90000 12345",
+    address: "24, Indiranagar Main Road, Bengaluru, Karnataka 560038",
+    hours: "सोम–शुक्र, सुबह 9:00–शाम 5:00 IST",
   },
 
   social: [
