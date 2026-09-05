@@ -3,11 +3,17 @@
 import { Check, ShoppingBag } from "lucide-react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import type { ProductItem } from "@/config/types"
+import { useCartActions } from "@/lib/use-cart"
 
-// Demo-only interaction: this is not wired to a real cart or checkout.
-// It exists to demonstrate the product page's conversion UI.
-export function AddToCartButton() {
+type Props = {
+  product?: ProductItem
+  quantity?: number
+}
+
+export function AddToCartButton({ product, quantity = 1 }: Props) {
   const [added, setAdded] = useState(false)
+  const { addItem } = useCartActions()
 
   return (
     <Button
@@ -15,8 +21,13 @@ export function AddToCartButton() {
       size="lg"
       className="h-12 flex-1 px-6"
       onClick={() => {
+        // preserve existing micro interaction
         setAdded(true)
         setTimeout(() => setAdded(false), 2000)
+
+        if (product) {
+          addItem(product, quantity)
+        }
       }}
     >
       {added ? (
