@@ -44,12 +44,17 @@ function Button({
   className,
   variant = 'default',
   size = 'default',
+  render,
   ...props
 }: ButtonPrimitive.Props & VariantProps<typeof buttonVariants>) {
   return (
     <ButtonPrimitive
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
+      render={render}
+      // `render` is used to swap the underlying element (e.g. next/link) for
+      // navigation CTAs, which is not a native <button>.
+      nativeButton={!render}
       {...props}
     />
   )
